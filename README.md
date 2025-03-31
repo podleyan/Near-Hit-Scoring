@@ -9,6 +9,12 @@ All required input files (e.g., training embeddings, LIGYSIS data) can be downlo
 🔗 [Input Files on Google Drive](https://drive.google.com/drive/folders/15rIGV7OB60f1sirQV26__LJUbQIM1aW7?hl=cs)
 
 Please download and place them in the appropriate `data/input` directory before running the scripts.
+There you can find:
+- `protein_residue_embeddings_SI_10.parquet,  protein_residue_embeddings_SI_30.parquet,  protein_residue_embeddings_SI_90.parquet,  protein_residue_embeddings_all.parquet` - scPDB dataset with ESM emneddings
+- `protein_SI_10.csv, protein_SI_30.csv` - List of the representative embeddings for sequence identity 10%, 30%
+- `LIGYSIS.csv` - LIGYSIS dataset per protein chain
+- `ligysis_df.parquet` - LIGYSIS dataset per residue
+- `LIGYSIS_predictions.pkl` - Predictions of all models from https://github.com/bartongroup/LBS-comparison/tree/master on LIGYSIS dataset
 
 
 ## 📂 Project Structure
@@ -21,6 +27,7 @@ Please download and place them in the appropriate `data/input` directory before 
 
 ## Usage
 
-### Generate ESM Vectors
+### Train Model
 ```bash
-python generate_esm_vectors_ligysis.py
+python train_model.py --train_file data/protein_residue_embeddings_all.parquet
+
