@@ -15,6 +15,7 @@ There you can find:
 - `LIGYSIS.csv` - LIGYSIS dataset per protein chain
 - `ligysis_df.parquet` - LIGYSIS dataset per residue
 - `LIGYSIS_predictions.pkl` - Predictions of all models from https://github.com/bartongroup/LBS-comparison/tree/master on LIGYSIS dataset
+- Folder ems_vectors_ligysis - Contain .npy vectors for each protein chain in LIGYSIS dataset
 
 
 ## 📂 Project Structure
